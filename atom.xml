@@ -6,7 +6,7 @@
   <link href="https://otach1/github.io/atom.xml" rel="self"/>
   
   <link href="https://otach1/github.io/"/>
-  <updated>2022-10-30T13:33:12.899Z</updated>
+  <updated>2022-10-30T13:43:08.983Z</updated>
   <id>https://otach1/github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://otach1/github.io/2022/10/25/hello-world/"/>
     <id>https://otach1/github.io/2022/10/25/hello-world/</id>
     <published>2022-10-25T14:40:40.515Z</published>
-    <updated>2022-10-30T13:33:12.899Z</updated>
+    <updated>2022-10-30T13:43:08.983Z</updated>
     
-    <content type="html"><![CDATA[<p>#施工中</p>]]></content>
+    <content type="html"><![CDATA[<p> #施工中</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;#施工中&lt;/p&gt;
+    <summary type="html">&lt;p&gt; #施工中&lt;/p&gt;
 </summary>
       
     
