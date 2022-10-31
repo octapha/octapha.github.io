@@ -6,7 +6,7 @@
   <link href="https://otach1/github.io/atom.xml" rel="self"/>
   
   <link href="https://otach1/github.io/"/>
-  <updated>2022-10-31T09:35:39.171Z</updated>
+  <updated>2022-10-31T10:01:13.825Z</updated>
   <id>https://otach1/github.io/</id>
   
   <author>
@@ -17,11 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CN-Review-Ch2</title>
+    <link href="https://otach1/github.io/2022/10/31/CN-Review-Ch2/"/>
+    <id>https://otach1/github.io/2022/10/31/CN-Review-Ch2/</id>
+    <published>2022-10-31T10:00:10.000Z</published>
+    <updated>2022-10-31T10:01:13.825Z</updated>
+    
+    
+    
+    
+    
+    <category term="计网笔记" scheme="https://otach1/github.io/tags/%E8%AE%A1%E7%BD%91%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>大三上计网复习笔记1</title>
     <link href="https://otach1/github.io/2022/10/31/CN-Review-Ch1/"/>
     <id>https://otach1/github.io/2022/10/31/CN-Review-Ch1/</id>
     <published>2022-10-31T09:33:40.000Z</published>
-    <updated>2022-10-31T09:35:39.171Z</updated>
+    <updated>2022-10-31T09:59:33.497Z</updated>
     
     <content type="html"><![CDATA[<h1 id="0"><a href="#0" class="headerlink" title="0"></a>0</h1>]]></content>
     
@@ -34,7 +49,7 @@
     
     
     
-    <category term="笔记" scheme="https://otach1/github.io/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="计网笔记" scheme="https://otach1/github.io/tags/%E8%AE%A1%E7%BD%91%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
