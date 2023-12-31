@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,ja,default" color-mode="light">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Otacheron" />
+  <meta name="description" content="" />
+  
+  
+  <title>
+    
+      JP2001-Young, Poor and Busy 
+      
+      
+      |
+    
+     元気な青い林檎屋
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="icon" href="/images/favicon.png">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+  <!-- hexo site css -->
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1886449_67xjft27j1l.css" />
+  <!-- 代码块风格 -->
+  
+
+  <!-- jquery3.3.1 -->
+  
+    <script defer type="text/javascript" src="/plugins/jquery.min.js"></script>
+  
+
+  <!-- fancybox -->
+  
+    <link href="/plugins/jquery.fancybox.min.css" rel="stylesheet">
+    <script defer type="text/javascript" src="/plugins/jquery.fancybox.min.js"></script>
+  
+  
+<script src="/js/fancybox.js"></script>
+
+
+  
+
+  
+
+  <script>
+    var html = document.documentElement
+    const colorMode = localStorage.getItem('color-mode')
+    if (colorMode) {
+      document.documentElement.setAttribute('color-mode', colorMode)
+    }
+  </script>
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="元気な青い林檎屋" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <div class="avatar">
+    <a href="/">
+      <!-- 头像取消懒加载，添加no-lazy -->
+      
+        <img no-lazy src="/images/avatar.png" alt="">
+      
+    </a>
+    <div class="nickname"><a href="/">Otacheron</a></div>
+  </div>
+  <div class="navbar">
+    <ul>
+      
+        <li class="nav-item" data-path="/">
+          <a href="/">Home</a>
+        </li>
+      
+        <li class="nav-item" data-path="/archives/">
+          <a href="/archives/">Archives</a>
+        </li>
+      
+        <li class="nav-item" data-path="/tags/">
+          <a href="/tags/">Tags</a>
+        </li>
+      
+        <li class="nav-item" data-path="/friends/">
+          <a href="/friends/">Friends</a>
+        </li>
+      
+        <li class="nav-item" data-path="/about/">
+          <a href="/about/">About</a>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+<script src="/js/activeNav.js"></script>
+
+
+
+      <div class="flex-container">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JP2001-Young, Poor and Busy</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-12-31 18:41:28
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/algorithm/" title="algorithm">
+                    #algorithm
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>今年下半年确实有点摸，之前本来想记录一下自己第一次训练模型的经历的，但是因为某些原因一直拖延，现在已经忘记了很多细节了。马上就要到新的一年了，还是想着记录点什么，这道题是套磁的时候给我的题目，网上也查不到题解，就想着正好写一篇博客。</p>
+<h4 id="题面："><a href="#题面：" class="headerlink" title="题面："></a>题面：</h4><blockquote>
+<p>Time Limit: 1000MS		Memory Limit: 30000K</p>
+</blockquote>
+<blockquote>
+<p>Description</p>
+<p>Ken and Keiko are young, poor and busy. Short explanation: they are students, and ridden with part-time jobs. To make things worse, Ken lives in Hakodate and Keiko in Tokyo. They want to meet, but since they have neither time nor money, they have to go back to their respective jobs immediately after, and must be careful about transportation costs. Help them find the most economical meeting point.<br>Ken starts from Hakodate, Keiko from Tokyo. They know schedules and fares for all trains, and can choose to meet anywhere including their hometowns, but they cannot leave before 8am and must be back by 6pm in their respective towns. Train changes take no time (one can leave the same minute he&#x2F;she arrives), but they want to meet for at least 30 minutes in the same city.</p>
+<p>There can be up to 100 cities and 2000 direct connections, so you should devise an algorithm clever enough for the task.</p>
+</blockquote>
+<blockquote>
+<p>Input</p>
+<p>The input is a sequence of data sets.</p>
+<p>The first line of a data set contains a single integer, the number of connections in the timetable. It is not greater than 2000.</p>
+<p>Connections are given one on a line, in the following format.</p>
+<p>Start_city HH:MM Arrival_city HH:MM price</p>
+<p>Start_city and Arrival_city are composed of up to 16 alphabetical characters, with only the first one in upper case. Departure and arrival times are given in hours and minutes (two digits each, separated by “:”) from 00:00 to 23:59. Arrival time is strictly after departure time. The price for one connection is an integer between 1 and 10000, inclusive. Fields are separated by spaces.</p>
+<p>The end of the input is marked by a line containing a zero.</p>
+<p>Output</p>
+<p>The output should contain one integer for each data set, the lowest cost possible. This is the total fare of all connections they use.</p>
+<p>If there is no solution to a data set, you should output a zero.</p>
+<p>The solution to each data set should be given in a separate line.</p>
+</blockquote>
+<blockquote>
+<p>Sample Input</p>
+<p>5<br>Hakodate 08:15 Morioka 12:30 2500<br>Morioka 14:05 Hakodate 17:30 2500<br>Morioka 15:30 Hakodate 18:00 3000<br>Morioka 14:30 Tokyo 17:50 3000<br>Tokyo 08:30 Morioka 13:35 3000<br>4<br>Hakodate 08:15 Morioka 12:30 2500<br>Morioka 14:04 Hakodate 17:30 2500<br>Morioka 14:30 Tokyo 17:50 3000<br>Tokyo 08:30 Morioka 13:35 3000<br>18<br>Hakodate 09:55 Akita 10:53 3840<br>Hakodate 14:14 Akita 16:09 1920<br>Hakodate 18:36 Akita 19:33 3840<br>Hakodate 08:00 Morioka 08:53 3550<br>Hakodate 22:40 Morioka 23:34 3550<br>Akita 14:23 Tokyo 14:53 2010<br>Akita 20:36 Tokyo 21:06 2010<br>Akita 08:20 Hakodate 09:18 3840<br>Akita 13:56 Hakodate 14:54 3840<br>Akita 21:37 Hakodate 22:35 3840<br>Morioka 09:51 Tokyo 10:31 2660<br>Morioka 14:49 Tokyo 15:29 2660<br>Morioka 19:42 Tokyo 20:22 2660<br>Morioka 15:11 Hakodate 16:04 3550<br>Morioka 23:03 Hakodate 23:56 3550<br>Tokyo 09:44 Morioka 11:04 1330<br>Tokyo 21:54 Morioka 22:34 2660<br>Tokyo 11:34 Akita 12:04 2010<br>0</p>
+</blockquote>
+<blockquote>
+<p>Sample Output</p>
+<p>11000<br>0<br>11090</p>
+</blockquote>
+<h4 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h4><p>这道题目的实质是一个带约束的TSP,在出发时间和到家时间以及会面时间的约束条件下保证总花费最少。<br>用CPP的话时间限制还是比较宽松的，所以考虑使用了动态规划。首先建立一个图，节点是城市，边是铁路，权值是车票价格。初始化最小费用为无穷大， 状态转移方程为：$最小费用 &#x3D; min(最小费用, 总费用)$<br>之后考虑维护两个数组，分别存储到达东京&#x2F;函馆和从东京&#x2F;函馆出发的费用。之后每个城市都计算总花费，找到最小的那个就行了。<br>输入输出注意处理时间以及注意总费用有两个值需要t+30即可。</p>
+<h4 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;map&gt;</span><br><span class="line">#include &lt;climits&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include &lt;utility&gt;</span><br><span class="line">#include &lt;algorithm&gt;</span><br><span class="line">#include &lt;queue&gt; </span><br><span class="line"></span><br><span class="line">#define INFTY (INT_MAX / 8)</span><br><span class="line">#define HAKODATE 0</span><br><span class="line">#define TOKYO 1</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">// Structure to represent a train schedule</span><br><span class="line">struct train_t &#123;</span><br><span class="line">  int s_city, a_city; // Departure and arrival cities</span><br><span class="line">  int s_time, a_time; // Departure and arrival times</span><br><span class="line">  int price;          // Ticket price</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// Structure to represent a node in the search</span><br><span class="line">struct Node &#123;</span><br><span class="line">  int city, time, cost;</span><br><span class="line"></span><br><span class="line">  Node(int c, int t, int co) : city(c), time(t), cost(co) &#123;&#125;</span><br><span class="line"></span><br><span class="line">  // Operator overloading for priority queue comparison</span><br><span class="line">  bool operator&gt;(const Node&amp; other) const &#123;</span><br><span class="line">    return cost &gt; other.cost;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// Comparison functions for sorting train schedules</span><br><span class="line">bool start_cmp(const train_t &amp;x, const train_t &amp;y) &#123; return x.s_time &lt; y.s_time; &#125;</span><br><span class="line">bool arrival_cmp(const train_t &amp;x, const train_t &amp;y) &#123; return y.a_time &lt; x.a_time; &#125;</span><br><span class="line"></span><br><span class="line">int n;</span><br><span class="line">train_t tr[2048];</span><br><span class="line"></span><br><span class="line">// Arrays to store cost information for different cities and times</span><br><span class="line">int cost_from_tokyo[101][601];</span><br><span class="line">int cost_from_hakodate[101][601];</span><br><span class="line">int cost_for_tokyo[101][601];</span><br><span class="line">int cost_for_hakodate[101][601];</span><br><span class="line"></span><br><span class="line">// Function to transform time from HH:MM format to minutes</span><br><span class="line">int transform_time(string s) &#123;</span><br><span class="line">  int result = ((s[0] - &#x27;0&#x27;) * 10 + (s[1] - &#x27;0&#x27;)) * 60 + ((s[3] - &#x27;0&#x27;) * 10 + (s[4] - &#x27;0&#x27;)) - (60 * 8);</span><br><span class="line">  if (result &lt; 0 || result &gt; 600) &#123;</span><br><span class="line">    return -1;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Function to input train schedule data</span><br><span class="line">int input() &#123;</span><br><span class="line">  int price, new_n;</span><br><span class="line">  string start_city, s_start_time, arrive_city, s_arrive_time;</span><br><span class="line">  map&lt;string, int&gt; city_dic; // Map to store city names and corresponding indices</span><br><span class="line">  int start_time, arrive_time;</span><br><span class="line"></span><br><span class="line">  city_dic.clear();</span><br><span class="line">  city_dic[&quot;Hakodate&quot;] = HAKODATE;</span><br><span class="line">  city_dic[&quot;Tokyo&quot;] = TOKYO;</span><br><span class="line"></span><br><span class="line">  cin &gt;&gt; n;</span><br><span class="line">  if (n == 0) &#123;</span><br><span class="line">    return 0;</span><br><span class="line">  &#125;</span><br><span class="line">  new_n = 0;</span><br><span class="line">  for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">    cin &gt;&gt; start_city &gt;&gt; s_start_time &gt;&gt; arrive_city &gt;&gt; s_arrive_time &gt;&gt; price;</span><br><span class="line">    if (!city_dic.count(start_city)) &#123;</span><br><span class="line">      city_dic[start_city] = city_dic.size();</span><br><span class="line">    &#125;</span><br><span class="line">    if (!city_dic.count(arrive_city)) &#123;</span><br><span class="line">      city_dic[arrive_city] = city_dic.size();</span><br><span class="line">    &#125;</span><br><span class="line">    if ((start_time = transform_time(s_start_time)) &lt; 0 || (arrive_time = transform_time(s_arrive_time)) &lt; 0) &#123;</span><br><span class="line">      continue;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    tr[new_n].s_city = city_dic[start_city];</span><br><span class="line">    tr[new_n].a_city = city_dic[arrive_city];</span><br><span class="line">    tr[new_n].s_time = start_time;</span><br><span class="line">    tr[new_n].a_time = arrive_time;</span><br><span class="line">    tr[new_n].price = price;</span><br><span class="line">    new_n++;</span><br><span class="line">  &#125;</span><br><span class="line">  n = new_n;</span><br><span class="line"></span><br><span class="line">  return 1;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Function to initialize cost tables</span><br><span class="line">void init_table() &#123;</span><br><span class="line">  for (int i = 0; i &lt; 101; i++) &#123;</span><br><span class="line">    for (int j = 0; j &lt; 601; j++) &#123;</span><br><span class="line">      cost_from_tokyo[i][j] = cost_from_hakodate[i][j] = cost_for_tokyo[i][j] = cost_for_hakodate[i][j] = INFTY;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Function to calculate costs for different paths</span><br><span class="line">void calc() &#123;</span><br><span class="line">  int i;</span><br><span class="line">  init_table();</span><br><span class="line"></span><br><span class="line">  i = 0;</span><br><span class="line">  cost_from_tokyo[TOKYO][0] = cost_from_hakodate[HAKODATE][0] = 0;</span><br><span class="line">  sort(tr, tr + n, start_cmp);</span><br><span class="line">  for (int t = 0; t &lt; 600; t++) &#123;</span><br><span class="line">    for (int c = 0; c &lt; 100; c++) &#123;</span><br><span class="line">      cost_from_tokyo[c][t + 1] = min(cost_from_tokyo[c][t + 1], cost_from_tokyo[c][t]);</span><br><span class="line">      cost_from_hakodate[c][t + 1] = min(cost_from_hakodate[c][t + 1], cost_from_hakodate[c][t]);</span><br><span class="line">    &#125;</span><br><span class="line">    while (i &lt; n &amp;&amp; tr[i].s_time == t) &#123;</span><br><span class="line">      cost_from_tokyo[tr[i].a_city][tr[i].a_time] =</span><br><span class="line">          min(cost_from_tokyo[tr[i].a_city][tr[i].a_time], cost_from_tokyo[tr[i].s_city][tr[i].s_time] + tr[i].price);</span><br><span class="line">      cost_from_hakodate[tr[i].a_city][tr[i].a_time] =</span><br><span class="line">          min(cost_from_hakodate[tr[i].a_city][tr[i].a_time], cost_from_hakodate[tr[i].s_city][tr[i].s_time] + tr[i].price);</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  i = 0;</span><br><span class="line">  cost_for_tokyo[TOKYO][600] = cost_for_hakodate[HAKODATE][600] = 0;</span><br><span class="line">  sort(tr, tr + n, arrival_cmp);</span><br><span class="line">  for (int t = 600; t &gt; 0; t--) &#123;</span><br><span class="line">    for (int c = 0; c &lt; 100; c++) &#123;</span><br><span class="line">      cost_for_tokyo[c][t - 1] = min(cost_for_tokyo[c][t - 1], cost_for_tokyo[c][t]);</span><br><span class="line">      cost_for_hakodate[c][t - 1] = min(cost_for_hakodate[c][t - 1], cost_for_hakodate[c][t]);</span><br><span class="line">    &#125;</span><br><span class="line">    while (i &lt; n &amp;&amp; tr[i].a_time == t) &#123;</span><br><span class="line">      cost_for_tokyo[tr[i].s_city][tr[i].s_time] =</span><br><span class="line">          min(cost_for_tokyo[tr[i].s_city][tr[i].s_time], cost_for_tokyo[tr[i].a_city][tr[i].a_time] + tr[i].price);</span><br><span class="line">      cost_for_hakodate[tr[i].s_city][tr[i].s_time] =</span><br><span class="line">          min(cost_for_hakodate[tr[i].s_city][tr[i].s_time], cost_for_hakodate[tr[i].a_city][tr[i].a_time] + tr[i].price);</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Function to search for the minimum cost</span><br><span class="line">int search() &#123;</span><br><span class="line">  int best = INFTY;</span><br><span class="line">  for (int t = 0; t &lt;= (600 - 30); t++) &#123;</span><br><span class="line">    for (int c = 0; c &lt; 100; c++) &#123;</span><br><span class="line">      int sum = cost_from_tokyo[c][t] + cost_from_hakodate[c][t] + cost_for_tokyo[c][t + 30] + cost_for_hakodate[c][t + 30];</span><br><span class="line">      best = min(best, sum);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return best == INFTY ? 0 : best;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Main function</span><br><span class="line">int main() &#123;</span><br><span class="line">  while (input()) &#123;</span><br><span class="line">    calc();</span><br><span class="line">    cout &lt;&lt; search() &lt;&lt; endl;</span><br><span class="line">  &#125;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="python打oj"><a href="#python打oj" class="headerlink" title="python打oj"></a>python打oj</h4><p>因为套磁的是nlp方向的教授，所以被要求使用python做一遍。因为上面的代码过CPP就用了0.03秒，所以直接改成python提交试了试，然后RE了。<br>于是考虑优化，感觉可以使用迪杰斯特拉解题，还是超时，于是考虑迪杰斯特拉的优化，使用了优先队列进行解题，但是倒数第二个点始终WA。<br>最后换了一下排序算法（调了另一个），尝试提交居然过了，而且时间只有0.37秒，非常的神奇。<br>最近在复习数学，还要练日语英语的口语，还要做毕业设计，比较忙。等空下来之后我做几道优先队列的题，再回来尝试完成这道题目的优化。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/07/22/word%20and%20phrase/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-12-31 18:41:28
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/algorithm/" title="algorithm">
+                        #algorithm
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E9%9D%A2%EF%BC%9A"><span class="toc-text">题面：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%9D%E8%B7%AF%EF%BC%9A"><span class="toc-text">思路：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="toc-text">源代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E6%89%93oj"><span class="toc-text">python打oj</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src='https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js' onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'TjC4a7WTeg11b1gzRjwaALUE-gzGzoHsz',
+        appKey: 'ds05XxR0IeBT4KC7u4mScn4f',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN,en,ja,default'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
+      </div>
+    
+  </div>
+
+
+        
+<div class="footer">
+  <div class="social">
+    <ul>
+      
+        <li>
+          <a title="github" target="_blank" rel="noopener" href="https://github.com/otach1">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="twitter" target="_blank" rel="noopener" href="https://twitter.com/otache_jlc">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        </li>
+      
+        <li>
+          <a title="rss" href="/atom.xml">
+            <i class="iconfont icon-rss"></i>
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Copyright © 2023 Oranges</a>
+        
+    </div>
+  
+    
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/zchengsite/hexo-theme-oranges">Theme by Oranges | Powered by Hexo</a>
+        
+    </div>
+  
+  
+</div>
+
+      </div>
+
+      <div class="tools-bar">
+        <div class="back-to-top tools-bar-item hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+        
+  <div class="search-icon tools-bar-item" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-title">
+        <span class="search-icon-input">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-search"></i>
+          </a>
+        </span>
+        
+          <input type="text" class="search-input" id="search-input" placeholder="搜索...">
+        
+        <span class="search-close-icon" id="search-close-icon">
+          <a href="javascript: void(0)">
+            <i class="iconfont icon-close"></i>
+          </a>
+        </span>
+      </div>
+      <div class="search-result" id="search-result"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    inputArea.onclick = function() {
+      getSearchFile()
+      this.onclick = null
+    }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        // inputArea.focus()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'>首次搜索，正在载入索引文件，请稍后……<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='" + data_url + "' class='search-result-title'>" + orig_data_title + "</a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<p class=\"search-result-abstract\">" + match_content + "...</p>"
+                }
+                str += "</li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>没有找到内容，请尝试更换检索词。<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>未找到search.xml文件，具体请参考：<a href='https://github.com/zchengsite/hexo-theme-oranges#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>请求失败，尝试重新刷新页面或稍后重试。<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+        
+  <div class="tools-bar-item theme-icon" id="switch-color-scheme">
+    <a href="javascript: void(0)">
+      <i id="theme-icon" class="iconfont icon-moon"></i>
+    </a>
+  </div>
+
+  
+<script src="/js/colorscheme.js"></script>
+
+
+
+
+
+        
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JP2001-Young%2C%20Poor%20and%20Busy + '&url=' + https%3A%2F%2Fotach1%2Fgithub.io%2F2023%2F12%2F31%2FJP2001-Young-Poor-and-Busy%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://otach1/github.io/2023/12/31/JP2001-Young-Poor-and-Busy/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+  
+<script src="/js/shares.js"></script>
+
+
+
+      </div>
+    </div>
+  
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(e){e.imageLazyLoadSetting.processImages=t;var n=e.imageLazyLoadSetting.isSPA,i=e.imageLazyLoadSetting.preloadRatio||1,r=o();function o(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){n&&(r=o());for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(e.innerHeight*i||document.documentElement.clientHeight*i)&&function(){var t,e,n,i,o=r[a];e=function(){r=r.filter(function(t){return o!==t})},(t=o).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,t.removeAttribute("data-original"),e&&e()},t.src!==i&&(n.src=i))}()}function a(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",a),e.addEventListener("resize",a),e.addEventListener("orientationchange",a)}(this);</script></body>
+</html>
