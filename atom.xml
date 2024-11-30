@@ -6,7 +6,7 @@
   <link href="https://otach1/github.io/atom.xml" rel="self"/>
   
   <link href="https://otach1/github.io/"/>
-  <updated>2023-12-31T15:18:44.263Z</updated>
+  <updated>2024-11-30T14:14:09.978Z</updated>
   <id>https://otach1/github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LinearA-Note</title>
+    <link href="https://otach1/github.io/2024/11/30/LinearA-Note/"/>
+    <id>https://otach1/github.io/2024/11/30/LinearA-Note/</id>
+    <published>2024-11-30T14:13:17.000Z</published>
+    <updated>2024-11-30T14:14:09.978Z</updated>
+    
+    
+    
+    
+    
+    <category term="maths" scheme="https://otach1/github.io/tags/maths/"/>
+    
+    <category term="note" scheme="https://otach1/github.io/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>JP2001-Young, Poor and Busy</title>
@@ -138,8 +155,8 @@
   
   <entry>
     <title>新日检540题错题整理</title>
-    <link href="https://otach1/github.io/2023/02/10/JLPT-N2-NewJT-WA/"/>
-    <id>https://otach1/github.io/2023/02/10/JLPT-N2-NewJT-WA/</id>
+    <link href="https://otach1/github.io/2023/02/11/JLPT-N2-NewJT-WA/"/>
+    <id>https://otach1/github.io/2023/02/11/JLPT-N2-NewJT-WA/</id>
     <published>2023-02-10T15:56:46.000Z</published>
     <updated>2023-02-11T14:13:25.662Z</updated>
     
