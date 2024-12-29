@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/12 
+      Analysis-Note 
       
       
       |
@@ -107,127 +107,160 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2024</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">Analysis-Note</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2024-12-29 22:43:17
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="标签"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/maths/" title="maths">
+                    #maths
+                  </a>
+                </span>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/note/" title="note">
+                    #note
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/11/30/LinearA-Note/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2024-12-29 22:43:17
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="标签"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/maths/" title="maths">
+                        #maths
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/note/" title="note">
+                        #note
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="Analysis-Note">
-        <div class="time-m-d">12-29</div>
-        <div class="title">
-          <a href="/2024/12/29/Analysis-Note/">
-            <span>Analysis-Note</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="LinearA-Note">
-        <div class="time-m-d">11-30</div>
-        <div class="title">
-          <a href="/2024/11/30/LinearA-Note/">
-            <span>LinearA-Note</span>
-          </a>
-        </div>
-      </div>
+
     
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="JP2001-Young, Poor and Busy">
-        <div class="time-m-d">12-31</div>
-        <div class="title">
-          <a href="/2023/12/31/JP2001-Young-Poor-and-Busy/">
-            <span>JP2001-Young, Poor and Busy</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="TOEIC-word">
-        <div class="time-m-d">07-22</div>
-        <div class="title">
-          <a href="/2023/07/22/word%20and%20phrase/">
-            <span>TOEIC-word</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="N2解题方法总结">
-        <div class="time-m-d">06-30</div>
-        <div class="title">
-          <a href="/2023/06/30/N2-method/">
-            <span>N2解题方法总结</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="红蓝宝书1000题N2难度的文法部分整理1">
-        <div class="time-m-d">03-31</div>
-        <div class="title">
-          <a href="/2023/03/31/N2-1000-Grammer-1/">
-            <span>红蓝宝书1000题N2难度的文法部分整理1</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JLPT-N2-NewJT-Inden">
-        <div class="time-m-d">02-11</div>
-        <div class="title">
-          <a href="/2023/02/11/JLPT-N2-NewJT-Inden/">
-            <span>JLPT-N2-NewJT-Inden</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="新日检540题错题整理">
-        <div class="time-m-d">02-11</div>
-        <div class="title">
-          <a href="/2023/02/11/JLPT-N2-NewJT-WA/">
-            <span>新日检540题错题整理</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="2022.12.04 n2考试练习全真模拟第1回（已取消）">
-        <div class="time-m-d">11-28</div>
-        <div class="title">
-          <a href="/2022/11/28/JLPT-N2-M1/">
-            <span>2022.12.04 n2考试练习全真模拟第1回（已取消）</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="计组2复习笔记1：流水线">
-        <div class="time-m-d">11-21</div>
-        <div class="title">
-          <a href="/2022/11/21/CO2-Re-Ch1/">
-            <span>计组2复习笔记1：流水线</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src='https://cdn.jsdelivr.net/npm/valine@1.4.18/dist/Valine.min.js' onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'TjC4a7WTeg11b1gzRjwaALUE-gzGzoHsz',
+        appKey: 'ds05XxR0IeBT4KC7u4mScn4f',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN,en,ja,default'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -494,6 +527,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + Analysis-Note + '&url=' + https%3A%2F%2Fotach1%2Fgithub.io%2F2024%2F12%2F29%2FAnalysis-Note%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=https://otach1/github.io/2024/12/29/Analysis-Note/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

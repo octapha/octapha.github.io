@@ -6,7 +6,7 @@
   <link href="https://otach1/github.io/atom.xml" rel="self"/>
   
   <link href="https://otach1/github.io/"/>
-  <updated>2024-11-30T14:14:09.978Z</updated>
+  <updated>2024-12-29T13:43:33.081Z</updated>
   <id>https://otach1/github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Analysis-Note</title>
+    <link href="https://otach1/github.io/2024/12/29/Analysis-Note/"/>
+    <id>https://otach1/github.io/2024/12/29/Analysis-Note/</id>
+    <published>2024-12-29T13:43:17.000Z</published>
+    <updated>2024-12-29T13:43:33.081Z</updated>
+    
+    
+    
+    
+    
+    <category term="maths" scheme="https://otach1/github.io/tags/maths/"/>
+    
+    <category term="note" scheme="https://otach1/github.io/tags/note/"/>
+    
+  </entry>
   
   <entry>
     <title>LinearA-Note</title>
